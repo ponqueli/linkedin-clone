@@ -6,7 +6,7 @@ const Sidebar = () => {
 
   const recentItem = (topic) => (
     <div className={styles.recentItem}>
-      <span>#</span>
+      <span className={styles.hashtag}>#</span>
       <p>{topic}</p>
     </div>
   );
