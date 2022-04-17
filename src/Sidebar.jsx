@@ -15,7 +15,7 @@ const Sidebar = () => {
     <div className={styles.sidebar}>
       <div className={styles.top}>  
         <img src="https://wallpaperaccess.com/full/1396544.jpg" alt="backGroundImage"/> 
-        <Avatar className={styles.avatar} src='https://lh3.googleusercontent.com/a-/AOh14GhtUVPmCuppZkIy50PNiUigf-3R_qd5lRHp7CQRjQ=s36-c-k-no'/>
+        <Avatar className={styles.avatar} src='https://lh3.googleusercontent.com/a-/AOh14GhtUVPmCuppZkIy50PNiUigf-3R_qd5lRHp7CQRjQ=s83-c-mo'/>
         <h2>Jose Conto</h2>
         <h4>zehconto@gmail.com</h4>
       </div>
