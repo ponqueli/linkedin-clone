@@ -1,4 +1,4 @@
-.inputOptions{
+.inputOptions {
   display: flex;
   align-items: center;
   margin-top: 15px;
@@ -6,7 +6,7 @@
   padding: 10px;
   cursor: pointer;
 }
-.inputOptions:hover{
+.inputOptions:hover {
   background-color: whitesmoke;
   border-radius: 10px;
 }

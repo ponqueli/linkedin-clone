@@ -3,9 +3,9 @@ import React from "react";
 import InputOptions from "./InputOptions";
 import styles from "./Post.module.css";
 import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
-import ChatRoundedIcon from '@mui/icons-material/ChatRounded';
-import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
-import SendRoundedIcon from '@mui/icons-material/SendRounded';
+import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
+import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
+import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
 const Post = ({ name, description, message, photoUrl }) => {
   return (
