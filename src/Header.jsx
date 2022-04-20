@@ -28,7 +28,10 @@ const Header = (props) => {
         <HeaderOption Icon={BusinessCenterRoundedIcon} title="Jobs" />
         <HeaderOption Icon={ChatRoundedIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsRoundedIcon} title="Notifications" />
-        <HeaderOption avatar="https://lh3.googleusercontent.com/a-/AOh14GhtUVPmCuppZkIy50PNiUigf-3R_qd5lRHp7CQRjQ=s83-c-mo" title="Me"/>
+        <HeaderOption
+          avatar="https://lh3.googleusercontent.com/a-/AOh14GhtUVPmCuppZkIy50PNiUigf-3R_qd5lRHp7CQRjQ=s83-c-mo"
+          title="Me"
+        />
       </div>
     </div>
   );

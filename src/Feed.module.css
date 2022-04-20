@@ -1,8 +1,8 @@
-.feed{
+.feed {
   flex: 0.6;
   margin: 0 20px;
 }
-.inputContainer{
+.inputContainer {
   background-color: white;
   padding: 10px;
   padding-bottom: 20px;
@@ -10,7 +10,7 @@
   margin-bottom: 20px;
 }
 
-.input{
+.input {
   border: 1px solid lightgray;
   border-radius: 30px;
   display: flex;
@@ -23,7 +23,7 @@
   width: 100%;
 }
 
-.input > form > input{
+.input > form > input {
   border: none;
   flex: 1;
   margin-left: 10px;
@@ -34,7 +34,7 @@
 .input > form > button {
   display: none;
 }
-.options{
+.options {
   display: flex;
   justify-content: space-evenly;
 }
