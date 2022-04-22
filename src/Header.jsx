@@ -6,8 +6,18 @@ import BusinessCenterRoundedIcon from "@mui/icons-material/BusinessCenterRounded
 import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
 import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
 import HeaderOption from "./HeaderOption.jsx";
+import { useDispatch } from "react-redux";
+import { auth } from "./firebase";
+import { logout } from "./features/userSlice";
 
 const Header = (props) => {
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  }
+  
   return (
     <div className={styles.header}>
       <div className={styles.left}>
@@ -18,7 +28,7 @@ const Header = (props) => {
 
         <div className={styles.search}>
           <SearchRoundedIcon />
-          <input type="text" />
+          <input placeholder="Search" type="text" />
         </div>
       </div>
 
@@ -31,6 +41,7 @@ const Header = (props) => {
         <HeaderOption
           avatar="https://lh3.googleusercontent.com/a-/AOh14GhtUVPmCuppZkIy50PNiUigf-3R_qd5lRHp7CQRjQ=s83-c-mo"
           title="Me"
+          onClick={logoutOfApp}
         />
       </div>
     </div>

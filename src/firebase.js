@@ -4,12 +4,12 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBQ6AY2JoIQ9s4L_8ZLACevTzGOc4RkLRA_",
-  authDomain: "linkedin-clone-by-conto.firebaseapp.com_",
+  apiKey: "AIzaSyAO1LCxQqTCS3xSKI0StASx3UZFP5h0tK0",
+  authDomain: "linkedin-clone-by-conto.firebaseapp.com",
   projectId: "linkedin-clone-by-conto",
-  storageBucket: "linkedin-clone-by-conto.appspot.com_",
-  messagingSenderId: "233398848875_",
-  appId: "1:233398848875:web:942d30d4ec090d844ad02e_",
+  storageBucket: "linkedin-clone-by-conto.appspot.com",
+  messagingSenderId: "233398848875",
+  appId: "1:233398848875:web:70349e5a33dc8bc34ad02e"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
