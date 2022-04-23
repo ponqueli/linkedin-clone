@@ -3,6 +3,7 @@ import styles from "./Login.module.css";
 import { auth } from "./firebase.js";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +14,23 @@ const Login = () => {
 
   const loginToApp = (e) => {
     e.preventDefault();
-    console.log("Login");
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((user) => {
+        dispatch(
+          login({
+            email: user.user.email,
+            uid: user.user.uid,
+            displayName: user.user.displayName,
+            photoUrl: user.user.photoURL,
+          })
+        );
+        toast.success("You are logged in!");
+      })
+      .catch((error) => {
+        console.log(error)
+        toast.error(error);
+      });
   };
 
   const register = () => {
@@ -35,16 +52,18 @@ const Login = () => {
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
                 displayName: name,
-                photoURL: profilePic,
+                photoUrl: profilePic,
               })
             );
+            toast.success("Account created successfully!");
           });
       })
-      .catch((error) => alert(error));
+      .catch((error) => toast.error(error));
   };
 
   return (
     <div className={styles.login}>
+      <Toaster position="top-right" reverseOrder={false} />
       <img
         src="https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo.png"
         alt="logo"

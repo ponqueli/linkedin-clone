@@ -9,6 +9,7 @@ import HeaderOption from "./HeaderOption.jsx";
 import { useDispatch } from "react-redux";
 import { auth } from "./firebase";
 import { logout } from "./features/userSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 const Header = (props) => {
   const dispatch = useDispatch();
@@ -16,10 +17,14 @@ const Header = (props) => {
   const logoutOfApp = () => {
     dispatch(logout());
     auth.signOut();
+    toast('You left us! Come back soon!', {
+      icon: '😭',
+    });
   }
   
   return (
     <div className={styles.header}>
+      <Toaster position="top-right" reverseOrder={false} />
       <div className={styles.left}>
         <img
           src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
@@ -39,7 +44,7 @@ const Header = (props) => {
         <HeaderOption Icon={ChatRoundedIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsRoundedIcon} title="Notifications" />
         <HeaderOption
-          avatar="https://lh3.googleusercontent.com/a-/AOh14GhtUVPmCuppZkIy50PNiUigf-3R_qd5lRHp7CQRjQ=s83-c-mo"
+          avatar={true}
           title="Me"
           onClick={logoutOfApp}
         />
