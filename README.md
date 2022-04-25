@@ -1,4 +1,13 @@
-A _LinkedIn Clone_ to study programming. 
-It was deployed in firebase.
-Check it out.
+# _LinkedIn Clone_
+
+The goal was to study and learn at the same time different things, such as:
+- ReactJS
+- Redux
+- Hooks
+- Css module
+- Authentication
+- Using firebase to persist and deploy.
+
+## 🔗 Deploy in Firebase
+Check it out:  
 https://linkedin-clone-by-conto.web.app/
