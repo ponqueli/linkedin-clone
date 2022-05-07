@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Login.module.css";
+import linkedinImg from "./linkedin.svg";
 import { auth } from "./firebase.js";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
@@ -112,13 +113,14 @@ const Login = () => {
           Sign In{" "}
         </button>
       </form>
-      <p>
+      <p className={styles.registerNow}>
         Not a member?
         <span className={styles.register} onClick={register}>
           {" "}
           Register Now
         </span>
       </p>
+      {/* <img src={linkedinImg} className={styles.imgBackground} alt="background"/> */}
     </div>
   );
 };
