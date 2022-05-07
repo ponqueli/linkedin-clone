@@ -28,14 +28,14 @@ const Login = () => {
         toast.success("You are logged in!");
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
         toast.error(error);
       });
   };
 
   const register = () => {
-    if (!name) {
-      return alert("Please enter your name");
+    if (!name || !email || !password) {
+      return toast.error("Name, email and password are required!");
     }
 
     auth
@@ -59,6 +59,13 @@ const Login = () => {
           });
       })
       .catch((error) => toast.error(error));
+  };
+
+  const handleSignButton = () => {
+    if (!email || !password) {
+      return true;
+    }
+    return false;
   };
 
   return (
@@ -95,7 +102,12 @@ const Login = () => {
           placeholder="Password"
         />
 
-        <button type="submit" onClick={loginToApp} className={styles.btnSubmit}>
+        <button
+          type="submit"
+          onClick={loginToApp}
+          className={styles.btnSubmit}
+          disabled={handleSignButton()}
+        >
           {" "}
           Sign In{" "}
         </button>
