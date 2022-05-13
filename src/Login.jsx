@@ -63,8 +63,11 @@ const Login = () => {
   };
 
   const handleSignButton = () => {
-    if (!email || !password) {
-      return true;
+    if(name && email && password) return true;
+    else{
+      if (!email || !password) {
+        return true;
+      }
     }
     return false;
   };
